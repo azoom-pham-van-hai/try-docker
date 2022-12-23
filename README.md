@@ -21,7 +21,7 @@ docker image tag arm64v8/mysql:latest db
 ```
 6. Run mysql image: 
 ```
-docker run -e MYSQL_ROOT_PASSWORD=password --name mydb db
+docker run -e MYSQL_ROOT_PASSWORD=password --name mydb -v mysql:/var/lib/mysql db
 ```
 7. Create database (In my case: my_sample_db): 
 ```
