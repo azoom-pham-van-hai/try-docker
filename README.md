@@ -32,19 +32,19 @@ Then enter: password and execute the below command:
 ```
 create database my_sample_db;
 ```
-8. Migrate database
-```
-docker exec -it myserver bash
-yarn prisma migrate dev --name create-table-users
-```
-9. Create netwotk
+8. Create netwotk
 ```
 docker network create mynetwork
 ```
-10. Join myserver and mydb to mynetwork:
+9. Join myserver and mydb to mynetwork:
 ```
 docker network connect mynetwork myserver
 docker network connect mynetwork mydb
+```
+10. Migrate database
+```
+docker exec -it myserver bash
+yarn prisma migrate dev --name create-table-users
 ```
 11. Enjoy: You can open a browser and type: 
 - To get users
